@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --blue: #72d6ff;
+    --cyan: #a1f3ff;
+    --bg: #07111f;
+    --text: #f4f8ff;
+    --muted: #9badc3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+button, input, select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.3;
+    z-index: -1;
+    animation: floating 6s infinite alternate;
+}
+
+.glow-one {
+    background: #168bff;
+    top: -100px;
+    left: -100px;
+}
+
+.glow-two {
+    background: #7c3aed;
+    bottom: -100px;
+    right: -100px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.brand > span:last-child {
+    color: var(--blue);
+    margin-left: -8px;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 11px;
+    color: #07111f;
+    background: linear-gradient(
+        135deg,
+        var(--cyan),
+        #718cff
+    );
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.login-container > .brand {
+    align-self: flex-start;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    margin: auto 0;
+    padding: 35px 25px;
+    text-align: center;
+
+    border: 1px solid #ffffff20;
+    border-radius: 25px;
+
+    background: #ffffff0b;
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 20px 70px #0005;
+
+    animation: appear 0.8s ease;
+}
+
+.badge {
+    color: var(--cyan);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.login-icon {
+    width: 75px;
+    height: 75px;
+    margin: 25px auto;
+    display: grid;
+    place-items: center;
+
+    border-radius: 22px;
+    background: linear-gradient(
+        135deg,
+        #72d6ff30,
+        #a78bfa30
+    );
+
+    color: var(--cyan);
+    font-size: 35px;
+
+    animation: floating 3s infinite;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 40px);
+    line-height: 1.3;
+}
+
+h1 span,
+h2 span {
+    color: var(--blue);
+}
+
+.login-card p {
+    margin: 15px 0 25px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+#enterBtn,
+#downloadBtn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        110deg,
+        var(--cyan),
+        #72baff,
+        #a7a0ff
+    );
+
+    color: #07111f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#enterBtn:hover,
+#downloadBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px #72d6ff40;
+}
+
+.login-card small {
+    display: block;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #778ba3;
+    font-size: 11px;
+}
+
+/* HALAMAN DOWNLOAD */
+
+.dashboard {
+    width: min(100% - 36px, 850px);
+    margin: auto;
+    padding: 25px 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.back-btn {
+    padding: 10px 14px;
+    border: 1px solid #ffffff25;
+    border-radius: 10px;
+    color: white;
+    background: #ffffff0a;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.hero {
+    padding: 50px 0 25px;
+    animation: appear 0.7s ease;
+}
+
+.hero p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.download-card {
+    max-width: 650px;
+    padding: 22px;
+    border: 1px solid #ffffff20;
+    border-radius: 22px;
+    background: #ffffff0b;
+    backdrop-filter: blur(20px);
+    animation: appear 0.8s ease;
+}
+
+.download-card h2 {
+    margin-bottom: 18px;
+}
+
+.platforms {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.platform {
+    flex: 1;
+    padding: 13px 8px;
+    border: 1px solid #ffffff20;
+    border-radius: 12px;
+    color: var(--muted);
+    background: #ffffff05;
+}
+
+.platform.active {
+    color: white;
+    border-color: var(--blue);
+    background: #72d6ff20;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-size: 13px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ffffff25;
+    border-radius: 12px;
+    outline: none;
+    color: white;
+    background: #081525;
+    font-size: 13px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--blue);
+}
+
+input::placeholder {
+    color: #778ba3;
+}
+
+select option {
+    color: white;
+    background: #081525;
+}
+
+#downloadBtn {
+    margin-top: 22px;
+}
+
+.status {
+    margin-top: 17px;
+    padding: 13px;
+    border: 1px solid #72d6ff30;
+    border-radius: 12px;
+    background: #72d6ff0c;
+    color: #b4c8dc;
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.status.success {
+    border-color: #7cf5c755;
+    color: #a7f5d5;
+}
+
+.status.error {
+    border-color: #ff8b9c55;
+    color: #ffabb7;
+}
+
+.notice {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 650px;
+    margin-top: 17px;
+}
+
+.steps article {
+    padding: 13px;
+    border: 1px solid #ffffff15;
+    border-radius: 12px;
+    background: #ffffff05;
+}
+
+.steps b {
+    font-size: 11px;
+}
+
+.steps p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 520px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .download-card {
+        padding: 17px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

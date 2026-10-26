@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialDrop - Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <main class="dashboard">
+
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-icon">✦</span>
+                Social<span>Drop</span>
+            </div>
+
+            <a href="index.html" class="back-btn">
+                ← Keluar
+            </a>
+        </header>
+
+        <section class="hero">
+            <div class="badge">VIDEO TOOLKIT</div>
+
+            <h1>
+                Video Favoritmu<br>
+                <span>Lebih Mudah.</span>
+            </h1>
+
+            <p>
+                Pilih platform, masukkan tautan,
+                dan tentukan kualitas video.
+            </p>
+        </section>
+
+        <section class="download-card">
+
+            <h2>Pilih Platform</h2>
+
+            <div class="platforms">
+                <button
+                    class="platform active"
+                    type="button"
+                    data-platform="tiktok">
+                    ♪ TikTok
+                </button>
+
+                <button
+                    class="platform"
+                    type="button"
+                    data-platform="instagram">
+                    ◎ Instagram
+                </button>
+            </div>
+
+            <form id="downloadForm">
+
+                <label for="videoUrl">Link Video</label>
+
+                <input
+                    type="url"
+                    id="videoUrl"
+                    placeholder="Tempel link TikTok di sini..."
+                    required
+                >
+
+                <label for="quality">Pilih Kualitas</label>
+
+                <select id="quality">
+                    <option value="auto">Otomatis</option>
+                    <option value="1080">Full HD 1080p</option>
+                    <option value="720">HD 720p</option>
+                    <option value="480">SD 480p</option>
+                    <option value="audio">Audio saja (jika didukung)</option>
+                </select>
+
+                <button type="submit" id="downloadBtn">
+                    Periksa Link →
+                </button>
+
+            </form>
+
+            <div id="status" class="status" aria-live="polite">
+                Masukkan link video untuk memeriksa formatnya.
+            </div>
+
+            <p class="notice">
+                
+                Gunakan konten yang kamu miliki atau punya izin.
+            </p>
+
+        </section>
+
+        <section class="steps">
+            <article>
+                <b>01 — Tempel link</b>
+                <p>Salin tautan video dari aplikasi.</p>
+            </article>
+
+            <article>
+                <b>02 — Pilih kualitas</b>
+                <p>Pilih kualitas yang tersedia.</p>
+            </article>
+
+            <article>
+                <b>03 — Unduh</b>
+                <p></p>
+            </article>
+        </section>
+
+        <footer>SocialDrop © 2026</footer>
+
+    </main>
+
+    <script src="home.js"></script>
+
+</body>
+</html>
